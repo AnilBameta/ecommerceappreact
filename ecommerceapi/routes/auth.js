@@ -3,6 +3,8 @@ const router = express.Router();
 const CryptoJS = require("crypto-js");
 const User = require('../models/User');
 const jwt = require('jsonwebtoken')
+
+
 //Register
 router.post('/register', (req,res) => {
     const newUser = new User({
@@ -50,6 +52,7 @@ router.post('/login',async (req,res) => {
     }
 
 })
+
 
 
 module.exports = router
